@@ -17,7 +17,7 @@ The Object Oriented Programming course will teach you the principles of Object O
 3. <a href=""> EXERCISE: Inheritance </a> 
 4. <a href=""> EXERCISE: Interfaces and Abstraction </a>
 5. <a href=""> EXERCISE: Polymorphism </a>
-6. <a href="> EXAM PREPARATION </a>
+6. <a href=""> EXAM PREPARATION </a>
 7. <a href=""> EXAM PREPARATION </a>
 9. <a href=""> EXAM PREPARATION </a>
 10. <a href=""> PRACTICAL EXAM </a>
