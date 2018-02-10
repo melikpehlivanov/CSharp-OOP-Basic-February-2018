@@ -10,8 +10,8 @@
 
     public Person(string name, int age)
     {
-        this.Name = name;
-        this.Age = age;
+        this.name = name;
+        this.age = age;
     }
 
     public string Name => this.name;
