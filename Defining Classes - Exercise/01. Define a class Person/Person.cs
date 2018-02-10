@@ -14,6 +14,6 @@
         this.Age = age;
     }
 
-    public string Name { get => this.name; set => this.name = value; }
-    public int Age { get => this.age; set => this.age = value; }
+    public string Name => this.name;
+    public int Age => this.age;
 }
