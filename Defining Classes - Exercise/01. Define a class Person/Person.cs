@@ -1,7 +1,7 @@
 ﻿class Person
 {
-    public string name;
-    public int age;
+    private string name;
+    private int age;
 
     public Person()
     {
@@ -10,8 +10,10 @@
 
     public Person(string name, int age)
     {
-        this.name = name;
-        this.age = age;
+        this.Name = name;
+        this.Age = age;
     }
 
+    public string Name { get => this.name; set => this.name = value; }
+    public int Age { get => this.age; set => this.age = value; }
 }
