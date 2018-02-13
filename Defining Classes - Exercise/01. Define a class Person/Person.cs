@@ -1,19 +1,6 @@
-﻿class Person
+﻿public class Person
 {
-    private string name;
-    private int age;
+    public string Name { get; set; }
 
-    public Person()
-    {
-    }
-
-
-    public Person(string name, int age)
-    {
-        this.name = name;
-        this.age = age;
-    }
-
-    public string Name => this.name;
-    public int Age => this.age;
+    public int Age { get; set; }
 }
