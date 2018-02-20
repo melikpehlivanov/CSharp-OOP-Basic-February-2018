@@ -1,61 +1,50 @@
-﻿namespace _05.Pizza_Calories
+﻿using System;
+
+public class StartUp
 {
-    using System;
-
-    public class StartUp
+    public static void Main()
     {
-        public static void Main()
+        var pizzaName = Console.ReadLine().Split();
+
+        try
         {
-            var input = Console.ReadLine();
-
-            while (input != "END")
-            {
-                var tokens = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                try
-                {
-                    switch (tokens[0])
-                    {
-                        case "Dough":
-                            var dough = new Dough(tokens[1], tokens[2], double.Parse(tokens[3]));
-                            Console.WriteLine($"{dough.GetCalories():f2}");
-                            break;
-                        case "Topping":
-                            var topping = new Topping(tokens[1], double.Parse(tokens[2]));
-                            Console.WriteLine($"{topping.GetCalories():f2}");
-                            break;
-                        case "Pizza":
-                            MakePizza(tokens);
-                            break;
-                    }
-
-                    input = Console.ReadLine();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    return;
-                }
-            }
+            MakePizza(pizzaName);
         }
-
-        public static void MakePizza(string[] tokens)
+        catch (Exception ex)
         {
-            var numberToppings = int.Parse(tokens[2]);
-            var pizza = new Pizza(tokens[1], numberToppings);
-
-            var doughInfo = Console.ReadLine().Split(' ');
-            var dough = new Dough(doughInfo[1], doughInfo[2], double.Parse(doughInfo[3]));
-            pizza.Dough = dough;
-
-            for (var i = 0; i < numberToppings; i++)
-            {
-                var topInfo = Console.ReadLine().Split(' ');
-                var topping = new Topping(topInfo[1], double.Parse(topInfo[2]));
-                pizza.AddTopping(topping);
-            }
-
-            Console.WriteLine($"{pizza.Name} - {pizza.GetCalories():f2} Calories.");
+            Console.WriteLine(ex.Message);
         }
     }
+
+    public static void MakePizza(string[] tokens)
+    {
+        int numberOfToppings = 0;
+        var pizza = new Pizza(tokens[1]);
+
+        tokens = Console.ReadLine().Split();
+
+        while (tokens[0] != "END")
+        {
+
+            if (tokens[0] == "Dough")
+            {
+                var dough = new Dough(tokens[1], tokens[2], double.Parse(tokens[3]));
+                pizza.Dough = dough;
+            }
+            else
+            {
+                var topping = new Topping(tokens[1], double.Parse(tokens[2]));
+                pizza.AddTopping(topping);
+                numberOfToppings++;
+            }
+
+            tokens = Console.ReadLine().Split();
+        }
+        pizza.NumberOfToppings = numberOfToppings;
+
+        Console.WriteLine($"{pizza.Name} - {pizza.GetCalories():f2} Calories.");
+    }
 }
+
+
 

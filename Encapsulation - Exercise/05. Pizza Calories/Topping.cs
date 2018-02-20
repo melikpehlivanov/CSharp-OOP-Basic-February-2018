@@ -18,7 +18,7 @@ public class Topping
     public string Type
     {
         get => this.type;
-        set
+        private set
         {
             if (value.ToLower() != "meat" &&
                 value.ToLower() != "veggies" &&
@@ -34,11 +34,11 @@ public class Topping
     public double Weight
     {
         get => this.weight;
-        set
+        private set
         {
             if (value < MinWeight || value > MaxWeight)
             {
-                throw new ArgumentException($"{this.Type} weight should be in the range [1..50].");
+                throw new ArgumentException($"{this.type} weight should be in the range [1..50].");
             }
             this.weight = value;
         }

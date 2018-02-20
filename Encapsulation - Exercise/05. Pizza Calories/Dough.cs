@@ -20,7 +20,7 @@ public class Dough
     public string FlourType
     {
         get => this.flourType;
-        set
+        private set
         {
             if (value.ToLower() != "wholegrain" &&
                 value.ToLower() != "white")
@@ -34,7 +34,7 @@ public class Dough
     public string BakingTechnique
     {
         get => this.bakingTechnique;
-        set
+        private set
         {
             if (value.ToLower() != "crispy" &&
                 value.ToLower() != "chewy" &&
@@ -49,7 +49,7 @@ public class Dough
     public double Weight
     {
         get => this.weight;
-        set
+        private set
         {
             if (value < MinWeight || value > MaxWeight)
             {
@@ -64,7 +64,7 @@ public class Dough
         return BaseCalories * this.Weight * this.GetFlourTypeModifier() * this.GetBakingTechniqueModifier();
     }
 
-    private double GetFlourTypeModifier()
+    private double GetBakingTechniqueModifier()
     {
         if (this.FlourType.ToLower() == "white")
         {
@@ -73,7 +73,7 @@ public class Dough
         return 1;
     }
 
-    private double GetBakingTechniqueModifier()
+    private double GetFlourTypeModifier()
     {
         if (this.BakingTechnique.ToLower() == "crispy")
         {

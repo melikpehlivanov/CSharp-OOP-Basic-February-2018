@@ -9,7 +9,7 @@ public class Pizza
     private int numberOfToppings;
     private List<Topping> toppings;
 
-    public Pizza(string name, int numberOfToppings)
+    public Pizza(string name)
     {
         this.Name = name;
         this.NumberOfToppings = numberOfToppings;
@@ -19,7 +19,7 @@ public class Pizza
     public string Name
     {
         get => this.name;
-        set
+        private set
         {
             if (value.Length < 1 || value.Length > 15)
             {
