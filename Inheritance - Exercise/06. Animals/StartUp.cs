@@ -40,7 +40,7 @@
                 case "Frog": return new Frog(animalName, animalAge, tokens[2]);
                 case "Kitten": return new Kitten(animalName, animalAge);
                 case "Tomcat": return new Tomcat(animalName, animalAge);
-                default: throw new ArgumentException("Invalid input!"); // NB!
+                default: throw new ArgumentException("Invalid input!");
             }
         }
     }

@@ -6,7 +6,7 @@
 
     public override string ProduceSound()
     {
-        return "Frogggg";
+        return "Ribbit";
     }
 }
 

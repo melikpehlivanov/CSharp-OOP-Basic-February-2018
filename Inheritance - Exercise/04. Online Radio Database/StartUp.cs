@@ -52,7 +52,7 @@ public class StartUp
                                    .Select(int.Parse)
                                    .ToList();
                 }
-                catch (Exception ex)
+                catch
                 {
                     throw new ArgumentException("Invalid song length.");
                 }
