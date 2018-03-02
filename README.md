@@ -15,7 +15,7 @@ The Object Oriented Programming course will teach you the principles of Object O
 1. <a href="https://github.com/melikpehlivanov/CSharp-OOP-Basic-February-2018/tree/master/Defining%20Classes%20-%20Exercise"> EXERCISE: Defining Classes </a> 
 2. <a href="https://github.com/melikpehlivanov/CSharp-OOP-Basic/tree/master/Encapsulation%20-%20Exercise"> EXERCISE: Encapsulation</a> 
 3. <a href="https://github.com/melikpehlivanov/CSharp-OOP-Basic/tree/master/Inheritance%20-%20Exercise"> EXERCISE: Inheritance </a> 
-4. <a href=""> EXERCISE: Interfaces and Abstraction </a>
+4. <a href="https://github.com/melikpehlivanov/CSharp-OOP-Basic-February-2018/tree/master/Intefaces%20-%20Exercises"> EXERCISE: Interfaces and Abstraction </a>
 5. <a href="https://github.com/melikpehlivanov/CSharp-OOP-Basic/tree/master/Polymorphism%20-%20Exercise"> EXERCISE: Polymorphism </a>
 6. <a href="https://github.com/melikpehlivanov/CSharp-OOP-Basic/tree/master/Exam%20Preparation%20-%2012%20July%202017"> EXAM PREPARATION </a>
 7. <a href=""> EXAM PREPARATION </a>
